@@ -18,27 +18,9 @@ class HomePageEducation extends StatelessWidget {
         ),
         SizedBox(height: 6),
         ListTile(
-          title: Text(
-            'Bacharelado em Ciência da Computação',
-            style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w500,
-            ),
-          ),
-          subtitle: Text(
-            'UNISUL',
-            style: TextStyle(
-              fontSize: 13,
-              fontWeight: FontWeight.w400,
-            ),
-          ),
-          trailing: Text(
-            '2017 - 2022',
-            style: TextStyle(
-              fontSize: 13,
-              fontWeight: FontWeight.w400,
-            ),
-          ),
+          title: Text('Bacharelado em Ciência da Computação'),
+          subtitle: Text('UNISUL'),
+          trailing: Text('2017 - 2022'),
         ),
         SizedBox(height: 6),
       ],

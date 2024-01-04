@@ -17,7 +17,16 @@ class HomePageExperience extends StatelessWidget {
           ),
         ),
         SizedBox(height: 6),
-        Text('Em desenvolvimento...'),
+        ListTile(
+          title: Text('Help Desk'),
+          subtitle: Text('Cubo Sistemas'),
+          trailing: Text('2020 - 2022'),
+        ),
+        ListTile(
+          title: Text('Desenvolvedor Web e Mobile'),
+          subtitle: Text('Cubo Sistemas'),
+          trailing: Text('2022 - 2023'),
+        ),
         SizedBox(height: 6),
       ],
     );

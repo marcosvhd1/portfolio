@@ -42,34 +42,42 @@ class HomePageContact extends StatelessWidget {
               Row(
                 children: [
                   IconButton.outlined(
-                    onPressed: () =>
-                        _launchUrl(Uri.parse("https://www.google.com/maps/place/28%C2%B015'53.5%22S+49%C2%B001'13.6%22W/@-28.2699516,-49.0110314,15z/data=!4m4!3m3!8m2!3d-28.264867!4d-49.020449?entry=ttu")),
+                    onPressed: () => _launchUrl(
+                      Uri.parse(
+                          "https://www.google.com/maps/place/28%C2%B015'53.5%22S+49%C2%B001'13.6%22W/@-28.2699516,-49.0110314,15z/data=!4m4!3m3!8m2!3d-28.264867!4d-49.020449?entry=ttu"),
+                    ),
                     icon: const Icon(FontAwesomeIcons.globe),
                   ),
                   IconButton.outlined(
-                    onPressed: () {},
+                    onPressed: () => _launchUrl(
+                      Uri.parse("mailto:marcosvhd1@gmail.com"),
+                    ),
                     icon: const Icon(Icons.email_outlined),
                   ),
                   IconButton.outlined(
                     onPressed: () {
                       if (Platform.isAndroid) {
-                        _launchUrl(Uri.parse(
-                            "https://wa.me/5548996351582")); // new line
+                        _launchUrl(
+                          Uri.parse("https://wa.me/5548996351582"),
+                        ); // new line
                       } else {
-                        _launchUrl(Uri.parse(
-                            "https://api.whatsapp.com/send?phone=554899631582")); // new line
+                        _launchUrl(
+                          Uri.parse("https://api.whatsapp.com/send?phone=554899631582"),
+                        ); // new line
                       }
                     },
                     icon: const Icon(FontAwesomeIcons.whatsapp),
                   ),
                   IconButton.outlined(
-                    onPressed: () =>
-                        _launchUrl(Uri.parse('https://github.com/marcosvhd1')),
+                    onPressed: () => _launchUrl(
+                      Uri.parse('https://github.com/marcosvhd1'),
+                    ),
                     icon: const Icon(FontAwesomeIcons.github),
                   ),
                   IconButton.outlined(
-                    onPressed: () => _launchUrl(Uri.parse(
-                        'https://www.linkedin.com/in/marcos-hellmann-2776b6229/')),
+                    onPressed: () => _launchUrl(
+                      Uri.parse('https://www.linkedin.com/in/marcos-hellmann-2776b6229/'),
+                    ),
                     icon: const Icon(FontAwesomeIcons.linkedin),
                   ),
                 ],
