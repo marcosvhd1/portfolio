@@ -8,7 +8,7 @@ class HomePageExperience extends StatelessWidget {
     return const Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(height: 6),
+        SizedBox(height: 10),
         Text(
           'Experiência',
           style: TextStyle(
@@ -16,7 +16,6 @@ class HomePageExperience extends StatelessWidget {
             fontWeight: FontWeight.w700,
           ),
         ),
-        SizedBox(height: 6),
         ListTile(
           title: Text('Help Desk'),
           subtitle: Text('Cubo Sistemas'),
@@ -27,7 +26,6 @@ class HomePageExperience extends StatelessWidget {
           subtitle: Text('Cubo Sistemas'),
           trailing: Text('2022 - 2023'),
         ),
-        SizedBox(height: 6),
       ],
     );
   }

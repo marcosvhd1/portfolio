@@ -9,7 +9,6 @@ class HomePageSkills extends StatelessWidget {
     return const Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(height: 6),
         Text(
           'Skills',
           style: TextStyle(
@@ -17,7 +16,6 @@ class HomePageSkills extends StatelessWidget {
             fontWeight: FontWeight.w700,
           ),
         ),
-        SizedBox(height: 6),
         Wrap(
           spacing: 10,
           children: [
@@ -31,7 +29,6 @@ class HomePageSkills extends StatelessWidget {
             Chip(label: Text('PHP'), avatar: Icon(FontAwesomeIcons.php)),
           ],
         ),
-        SizedBox(height: 6),
       ],
     );
   }

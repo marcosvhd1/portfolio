@@ -8,7 +8,6 @@ class HomePageAbout extends StatelessWidget {
     return const Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(height: 6),
         Text(
           'Sobre',
           style: TextStyle(
@@ -16,7 +15,6 @@ class HomePageAbout extends StatelessWidget {
             fontWeight: FontWeight.w700,
           ),
         ),
-        SizedBox(height: 6),
         Text(
           'Desenvolvedor de software experiente com habilidades em JavaScript, Flutter e PHP. Experiência em desenvolvimento de aplicativos móveis e web, bem como em soluções de back-end. Meu objetivo é trabalhar em uma empresa inovadora onde eu possa aplicar minhas habilidades de programação para criar soluções de alta qualidade, contribuindo para o sucesso da empresa.',
           style: TextStyle(
@@ -24,7 +22,6 @@ class HomePageAbout extends StatelessWidget {
             fontWeight: FontWeight.w400,
           ),
         ),
-        SizedBox(height: 6),
       ],
     );
   }

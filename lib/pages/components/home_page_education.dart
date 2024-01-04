@@ -8,7 +8,6 @@ class HomePageEducation extends StatelessWidget {
     return const Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(height: 6),
         Text(
           'Educação',
           style: TextStyle(
@@ -16,13 +15,11 @@ class HomePageEducation extends StatelessWidget {
             fontWeight: FontWeight.w700,
           ),
         ),
-        SizedBox(height: 6),
         ListTile(
           title: Text('Bacharelado em Ciência da Computação'),
           subtitle: Text('UNISUL'),
           trailing: Text('2017 - 2022'),
         ),
-        SizedBox(height: 6),
       ],
     );
   }

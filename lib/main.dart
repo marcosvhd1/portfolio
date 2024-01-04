@@ -5,12 +5,8 @@ void main() {
   runApp(
     MaterialApp(
       title: 'Portfolio',
-      theme: ThemeData.light(
-        useMaterial3: true,
-      ),
-      darkTheme: ThemeData.dark(
-        useMaterial3: true,
-      ),
+      theme: ThemeData.light(useMaterial3: true),
+      darkTheme: ThemeData.dark(useMaterial3: true),
       debugShowCheckedModeBanner: false,
       home: const HomePage(),
     ),
