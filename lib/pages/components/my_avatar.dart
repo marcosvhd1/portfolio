@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/data/user_data.dart';
 
 class MyAvatar extends StatelessWidget {
   const MyAvatar({super.key});
@@ -6,12 +7,10 @@ class MyAvatar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CircleAvatar(
-      radius: 40,
+      radius: 45,
       child: ClipRRect(
         borderRadius: BorderRadius.circular(15),
-        child: Image.network(
-          'https://avatars.githubusercontent.com/u/56443755?v=4',
-        ),
+        child: Image.network(UserData.avatarUrl),
       ),
     );
   }

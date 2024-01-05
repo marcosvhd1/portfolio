@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/data/user_data.dart';
 
 class HomePageAbout extends StatelessWidget {
   const HomePageAbout({super.key});
@@ -16,7 +17,7 @@ class HomePageAbout extends StatelessWidget {
           ),
         ),
         Text(
-          'Desenvolvedor de software experiente com habilidades em JavaScript, Flutter e PHP. Experiência em desenvolvimento de aplicativos móveis e web, bem como em soluções de back-end. Meu objetivo é trabalhar em uma empresa inovadora onde eu possa aplicar minhas habilidades de programação para criar soluções de alta qualidade, contribuindo para o sucesso da empresa.',
+          UserData.about,
           style: TextStyle(
             fontSize: 13,
             fontWeight: FontWeight.w400,

@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:portfolio/data/user_data.dart';
 import 'package:portfolio/pages/components/my_avatar.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -16,6 +16,8 @@ class HomePageContact extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isDarkMode = MediaQuery.platformBrightnessOf(context) == Brightness.dark;
+
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -24,14 +26,14 @@ class HomePageContact extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
-                'Marcos Vinícius Hellmann Delfino',
+                UserData.name,
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w700,
                 ),
               ),
               const Text(
-                'Desenvolvedor web e mobile focado em construir produtos com atenção extra aos detalhes.',
+                UserData.summary,
                 style: TextStyle(
                   fontSize: 13,
                   fontWeight: FontWeight.w400,
@@ -39,27 +41,42 @@ class HomePageContact extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10),
-                child: Row(
+                child: Wrap(
                   children: [
                     IconButton.outlined(
-                      icon: const Icon(FontAwesomeIcons.globe),
-                      onPressed: () => _launchUrl("https://www.google.com/maps/place/28%C2%B015'53.5%22S+49%C2%B001'13.6%22W/@-28.2699516,-49.0110314,15z/data=!4m4!3m3!8m2!3d-28.264867!4d-49.020449?entry=ttu"),
+                      icon: Image.asset(
+                        height: 25,
+                        isDarkMode ? 'assets/images/map-white.png' : 'assets/images/map.png',
+                      ),
+                      onPressed: () => _launchUrl(UserData.mapUrl),
                     ),
                     IconButton.outlined(
-                      icon: const Icon(Icons.email_outlined),
-                      onPressed: () => _launchUrl("mailto:marcosvhd1@gmail.com"),
+                      icon: Image.asset(
+                        height: 25,
+                        isDarkMode ? 'assets/images/gmail-white.png' : 'assets/images/gmail.png',
+                      ),
+                      onPressed: () => _launchUrl("mailto:${UserData.mail}"),
                     ),
                     IconButton.outlined(
-                      icon: const Icon(FontAwesomeIcons.whatsapp),
-                      onPressed: () => Platform.isAndroid ? _launchUrl("https://wa.me/5548996351582") : _launchUrl("https://api.whatsapp.com/send?phone=554899631582"),
+                      icon: Image.asset(
+                        height: 25,
+                        isDarkMode ? 'assets/images/whatsapp-white.png' : 'assets/images/whatsapp.png',
+                      ),
+                      onPressed: () => Platform.isAndroid ? _launchUrl("https://wa.me/${UserData.whatsapp}") : _launchUrl("https://api.whatsapp.com/send?phone=${UserData.whatsapp}"),
                     ),
                     IconButton.outlined(
-                      icon: const Icon(FontAwesomeIcons.github),
-                      onPressed: () => _launchUrl('https://github.com/marcosvhd1'),
+                      icon: Image.asset(
+                        height: 25,
+                        isDarkMode ? 'assets/images/github-white.png' : 'assets/images/github.png',
+                      ),
+                      onPressed: () => _launchUrl(UserData.githubUrl),
                     ),
                     IconButton.outlined(
-                      icon: const Icon(FontAwesomeIcons.linkedin),
-                      onPressed: () => _launchUrl('https://www.linkedin.com/in/marcos-hellmann-2776b6229/'),
+                      icon: Image.asset(
+                        height: 25,
+                        isDarkMode ? 'assets/images/linkedin-white.png' : 'assets/images/linkedin.png',
+                      ),
+                      onPressed: () => _launchUrl(UserData.linkedinUrl),
                     ),
                   ],
                 ),
